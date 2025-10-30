@@ -20,9 +20,13 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 10.0.x
-    - name: 
+    - name: build
       run: dotnet build
+
     - name: old dotnet test
-      run: dotnet test Colors/bin/Debug/net10.0/Colors.dll
+      run: dotnet vstest Colors/bin/Debug/net10.0/Colors.dll
+      if: always()
+
     - name: new dotnet test with colors
       run: dotnet test --output detailed 
+      if: always()

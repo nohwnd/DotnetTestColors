@@ -28,5 +28,5 @@ jobs:
       if: always()
 
     - name: new dotnet test with colors
-      run: dotnet test --output detailed 
+      run: dotnet test --no-build --output detailed 
       if: always()

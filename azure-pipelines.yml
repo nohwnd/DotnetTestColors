@@ -19,5 +19,5 @@ steps:
 - script: dotnet build
   displayName: 'build'
 
-- script: dotnet test --no-build --output detailed 
+- script: dotnet test --no-build --output detailed --report-azdo
   displayName: 'new dotnet test with colors'
